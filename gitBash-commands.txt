@@ -1,0 +1,9 @@
+- command to pull repository from github
+- git clone <repository_url>
+
+- commands to push in github
+- go inside folder, that you want to push -> then open git bash there
+	- run these commands :
+	- git add .
+	- git commit -m "<commit_comment>"
+	- git push

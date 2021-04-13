@@ -1,0 +1,15 @@
+Note: Before pushing, you should always pull
+
+STEPS TO PULL
+---------------
+
+- first check the git status
+	- git status
+- add which folder you want to push [here I want to push only the 'src' folder]
+	- git add src
+- write valid comment [currently I am creating the user update form]
+	- git commit -m "user update form in progress"
+- before pushing you should pull the current codes [here I am taking the pull from the developement folder]
+	- git pull origin developement
+- now you can push [here I am pushing in the developement folder]
+	- git push origin developement

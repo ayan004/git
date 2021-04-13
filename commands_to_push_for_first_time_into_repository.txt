@@ -1,0 +1,43 @@
+subject: here I am creating a private repository and trying to access the repository with SSH keys
+	note: I can simply access the repository with username and password also...but I choose to access it with SSH keys.
+		So whenever I will try to access this github repo from this laptop, I don't have to use username and password
+		for authenticating myself.
+
+- git config --global user.name <your_name>
+- git config --global user.email <dipayantah1234@gmail.com>
+- touch .gitignore  
+	- creates a empty file called .gitignore where you can store the names of files or folders that you don't want to upload to git
+	- example to exclude the node_modules folder from uploading to git
+		- node_modules/
+- git init
+	- initialises git and creates a .git file
+- git add .
+	- it creates a staging area for the project
+- git commit -m "initial commit"
+	- creates a commit
+- git status
+	- this command is not mandatory to run at this point
+	- this shows the current status of the project for uploading on git
+- git remote add origin <url of github repo>
+	- this creates a link from the system where you are running the command and the "url of github repo"
+- git push origin master
+	- this will actually push the project into your github repo
+
+GENERATING A PUBLIC KEY ON YOUR COMPUTER
+-------------------------------------------
+- ssh-keygen -t ed25519 -C "your_email_on_github.ac@example.com"
+	- generate a "ed25519" algorithm public key
+- ssh-keygen -t rsa -b 4096 -C "your_email_on_github.ac@example.com"
+	- generate a "rsa" algorithm public key
+- cat <path where key is created..example../c/Users/Ayan/.ssh/id_rsa.pub>
+	- this displays the created keys on the windows
+- go to this link, "https://github.com/settings/keys"
+	- click on add new ssh key
+	- copy the keys and paste here, give a title, then click on "Add.." button
+
+AGAIN TO ADD FOR THE NEXT TIME
+-------------------------------
+- git add .
+- git commit -m "................."
+- git push origin master
+	
